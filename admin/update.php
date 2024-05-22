@@ -44,7 +44,7 @@ if (isset($_GET['id'])) {
     exit;
 }
 
-include "../includes/navAdmin.php";
+include "../includes/navAdmin.html";
 ?>
 
 <div class="intro">

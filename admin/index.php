@@ -26,7 +26,7 @@ if ($db) {
     echo "Koneksi gagal!";
 }
 
-include "../includes/navAdmin.php"
+include "../includes/navAdmin.html"
 ?>
 
 

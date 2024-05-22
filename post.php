@@ -1,6 +1,6 @@
 <?php
 include_once 'includes/database.php';
-include "includes/header.php";
+include "includes/header.html";
 include_once 'admin/process.php';
 
 $database = new Database();

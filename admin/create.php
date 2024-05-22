@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 
-include "../includes/navAdmin.php";
+include "../includes/navAdmin.html";
 ?>
 
 <script>
