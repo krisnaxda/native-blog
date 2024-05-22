@@ -4,7 +4,7 @@ session_start();
 include_once '../includes/database.php';
 
 if (isset($_SESSION['admin_id'])) {
-    header('Location: admin/index.php');
+    header('Location: index.php');
     exit;
 }
 
@@ -12,8 +12,8 @@ $database = new Database();
 $db = $database->getConnection();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = htmlspecialchars(strip_tags($_POST['username']));
+    $password =  htmlspecialchars(strip_tags($_POST['password']));
 
     $query = "SELECT id, username, password FROM admin WHERE username = :username";
     $stmt = $db->prepare($query);
@@ -29,10 +29,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: index.php');
             exit;
         }else{
-            $error = "Username atau password salah.";
+            $error = "Wrong Password";
         }
     } else {
-        $error = "Username atau password salah.";
+        $error = "We can't match any of your username/password.";
     }
 }
 ?>
@@ -43,12 +43,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Admin</title>
+    <style>
+        .error {
+            margin-top: 10px;
+            color: red;
+            display: none; /* Initially hidden */
+        }
+    </style>
     <link rel="stylesheet" href="../includes/admin.css">
 </head>
 <body>
     <div class="login-container">
         <h2>Login Admin</h2>
-        <?php if (isset($error)) { echo "<p style='color: red;'>$error</p>"; } ?>
         <form action="login.php" method="POST">
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -60,6 +66,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <button type="submit">Login</button>
         </form>
+        <?php if (isset($error)): ?>
+        <div id="error-message" class="error"><?php echo htmlspecialchars($error); ?></div>
+    <?php endif; ?>
     </div>
 </body>
 </html>
+
+<script>
+        // Show the error message if it exists
+        document.addEventListener('DOMContentLoaded', function() {
+            var errorMessage = document.getElementById('error-message');
+            if (errorMessage) {
+                errorMessage.style.display = 'block';
+                setTimeout(function() {
+                    errorMessage.style.display = 'none';
+                }, 5000); // 5000 milliseconds = 5 seconds
+            }
+        });
+    </script>

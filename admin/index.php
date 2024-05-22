@@ -62,7 +62,7 @@ foreach ($posts as $post) {
     </div>
     <div class="but">
       <div class="">
-      <a class='update-btn' href='update.php?id=<?php echo $post['id']; ?>'>
+      <a class='update-btn' style="text-decoration: none;" href='update.php?id=<?php echo $post['id']; ?>'>
         Update
     </a>
       </div>
@@ -79,8 +79,6 @@ foreach ($posts as $post) {
 }
 ?>
 </div>
-
-<p style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">© All rights reserved — Native Blog</p>
 <!-- Modal Delete -->
 <div id="deleteModal" class="modal">
   <div class="modal-content">
@@ -91,4 +89,11 @@ foreach ($posts as $post) {
   </div>
 </div>
 
-<script type="text/javascript" async src="../includes/modal.js"></script>
+
+
+</div>
+<div class="footer">
+    <div class="footer-content">
+    © All rights reserved — Native Blog
+    </div>
+</div>

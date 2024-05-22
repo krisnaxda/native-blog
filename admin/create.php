@@ -61,9 +61,14 @@ include "../includes/navAdmin.php";
             <textarea name="content" id=""></textarea>
         </div>
         <div class="submit">
-        <button type="submit">Add Post</button>
+        <button type="submit" class="update-btn">Add Post</button>
         </div>
     </form>
 </div>
 
-<p style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">© All rights reserved — Native Blog</p>
+</div>
+<div class="footer">
+    <div class="footer-content">
+    © All rights reserved — Native Blog
+    </div>
+</div>

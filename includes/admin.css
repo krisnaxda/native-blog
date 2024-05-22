@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #111111;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,11 +10,13 @@ body {
 }
 
 .login-container {
-    background: #fff;
+    background: #222222;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px #f5f5a56c;
+    border: #f5f5a5 1px solid;
     width: 300px;
+    color: #fff;
 }
 
 h2 {
@@ -40,13 +42,18 @@ h2 {
 button {
     width: 100%;
     padding: 10px;
-    background: #007BFF;
+    background: #afaf23;
     border: none;
-    color: #fff;
+    color: #000000;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #8a8a12;
+}
+
+
+input{
+    border-radius: 4px;
 }

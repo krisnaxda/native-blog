@@ -91,6 +91,11 @@ a {
     color: #666666;
 }
 
+.post h1{
+    font-size: 4em;
+    color: white;
+}
+
 .post-list {
     height: 70px;
     margin: auto;

@@ -9,7 +9,7 @@
 <body style="background-color: #111111">
 <div class="main">
   <nav class="navbar">
-    <div class="logo">
+    <a href="index.php" class="logo">
       <svg
       version="1.1"
       id="svg1"
@@ -86,20 +86,13 @@
          d="m -98.753484,2.8549896 1.290818,-1.2908184 0.811768,0.5355199 -1.295581,1.2955815 z"
          id="path25" /></g></g>
       </svg>
-    </div>
+    </a>
     <div class="breadcrumb">
       <div class="boxpage">
-      <a href="#">Home</a>
+      <a href="index.php">Home</a>
       </div>
       <div class="boxpage">
       <a href="#">Explore</a>
       </div>
     </div>
   </nav>
-  
-
-<div class="intro">
-  <h1>Native-Blog</h1>
-  <h2>SQL, PHP, JavaScript and everything in between.</h2>
-</div>
-  

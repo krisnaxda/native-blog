@@ -24,6 +24,11 @@ if ($db) {
     echo "Koneksi gagal!";
 }
 ?>
+<div class="intro">
+  <h1>Native-Blog</h1>
+  <h2>SQL, PHP, JavaScript and everything in between.</h2>
+</div>
+  
 <?php
 foreach ($posts as $post) {
 

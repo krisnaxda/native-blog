@@ -2,12 +2,15 @@
 class Post {
     private $conn;
     private $table_name = "posts";
+    private $tableadmin = "admin";
 
     public $id;
     public $admin_id;
     public $title;
     public $content;
     public $date;
+
+    public $username;
 
     public function __construct($db) {
         $this->conn = $db;
@@ -68,6 +71,29 @@ class Post {
         return false;
 
     }
+
+    public function show(){
+        $query = "SELECT posts.id, posts.admin_id, posts.title, posts.content,posts.date, admin.username FROM $this->table_name INNER JOIN $this->tableadmin WHERE posts.id = :id AND posts.admin_id = admin.id LIMIT 0,1";
+
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(":id", $this->id, PDO::PARAM_INT);
+
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC); 
+
+        if ($row) {
+            $this->title = $row['title'];
+            $this->content = $row['content'];
+            $this->date = $row['date'];
+            $this->username = $row['username'];
+            return true;
+        }
+
+        return false;
+
+    }
+
     public function update() {
         try {
             $query = "UPDATE " . $this->table_name . " SET title = :title, content = :content WHERE id = :id AND admin_id = :admin_id";

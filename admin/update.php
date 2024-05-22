@@ -46,9 +46,21 @@ if (isset($_GET['id'])) {
 
 include "../includes/navAdmin.php";
 ?>
+
 <div class="intro">
-  <h1>Create Post</h1>
+  <h1>Update Post</h1>
 </div>
+<script>
+//     function textAreaAdjust(element) {
+//   element.style.height = "1px";
+//   element.style.height = (25+element.scrollHeight)+"px";
+// }
+
+function setHeight(fieldId){
+    document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight+'px';
+}
+setHeight('content');
+</script>
 
 <div id="createdashboard">
 
@@ -72,11 +84,17 @@ include "../includes/navAdmin.php";
             Content
         </div>
         <div>
-            <textarea name="content" id=""><?php echo htmlspecialchars($post->content); ?></textarea>
+            <textarea name="content" onkeyup="textAreaAdjust(this)" id="content"  TextMode="MultiLine" onclick="setHeight('content');" onkeydown="setHeight('content');"><?php echo htmlspecialchars($post->content); ?></textarea>
         </div>
         <div class="submit">
-        <button type="submit">Update Post</button>
+        <button type="submit" class="update-btn">Update Post</button>
         </div>
     </form>
 </div>
-<p style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">© All rights reserved — Native Blog</p>
+</div>
+
+<div class="footer">
+    <div class="footer-content">
+    © All rights reserved — Native Blog
+    </div>
+</div>
