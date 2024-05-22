@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+    color: #a3a3a3;
+}
+
+.main {
+  background-color:#111111;
+  padding: 1px;
+  text-align:left;
+  color: #a3a3a3;
+  width: 60%;
+  margin: 0 auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar{
+  background-color: #222121;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1%;
+  border-radius: 5px;
+}
+
+.logo {
+    width: 100px;
+    height: 70%;
+    padding: 4px;
+}
+.logo:hover {
+    width: 100px;
+    height: 70%;
+    padding: 4px;
+    background-color: #111111;
+}
+.breadcrumb { 
+    margin-right: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 70%;
+}
+
+.boxpage {
+    border-radius: 5px;
+    width: 90px;
+    padding: 10px;
+    text-align : center
+    
+}
+
+.boxpage:hover {
+    border: 1px solid #838383;
+}
+
+
+.boxpage a {
+    align-items: center;
+    text-decoration: none;
+}
+
+.boxpage a:hover {
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.boxpage:hover {
+    border-radius: 5px;
+    background-color: #111111;
+}
+
+.intro {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.intro h1{
+    font-size: 5em;
+    color: white;
+}
+
+.intro h2{
+    margin-top: -40px;
+    color: #666666;
+}
+
+.post-list {
+    height: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1%;
+    border-radius: 5px;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #fff;
+}
+
+.post-list:hover{
+    color: #f5f5a5;
+    border: 1px solid rgb(245, 245, 165);
+
+    .post-date{
+        color: #f5f5a5;
+    }
+}
+
+.post-date{
+    font-size: 17px;
+    color: #a3a3a3;
+}
