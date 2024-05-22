@@ -37,6 +37,16 @@ Don't forget to change 'id' for table posts, and admin to auto increment
 1. Create Update Delete POST
 2. Multiple Author or just One Author
 3. Rich Text Editor for posts with TinyMCE
+4. Delete Modal Pop-up
+
+## PREVIEW
+
+![image](https://github.com/krisnaxda/native-blog/assets/30945632/168edc43-254d-43fd-acf3-4c69cb6e4d47)
+![image](https://github.com/krisnaxda/native-blog/assets/30945632/2a9a2fae-214c-4ef4-bbc5-7ec8d2b06d6c)
+![image](https://github.com/krisnaxda/native-blog/assets/30945632/09b579da-852d-44a9-8198-b63c56d5e800)
+![image](https://github.com/krisnaxda/native-blog/assets/30945632/03546836-d9aa-4ac6-a3b6-f7273e3a292e)
+![image](https://github.com/krisnaxda/native-blog/assets/30945632/52bda9f2-e01e-449c-bb29-c6e302e5f57d)
 
 
-Thanks to [MalasNgoding](https://www.malasngoding.com/membuat-crud-dengan-oop-php-dan-mysql-part-2/), and [ChatGPT](https://chatgpt.com/)
+
+Thanks to [MalasNgoding](https://www.malasngoding.com/membuat-crud-dengan-oop-php-dan-mysql-part-2/),W3Schools, and [ChatGPT](https://chatgpt.com/)
