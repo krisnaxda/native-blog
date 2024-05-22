@@ -22,7 +22,7 @@ class Post {
         $stmt = $this->conn->prepare($query);
 
         $this->title = htmlspecialchars(strip_tags($this->title));
-        $this->content = htmlspecialchars(strip_tags($this->content));
+        $this->content = ($this->content);
         $this->date = date('Y-m-d H:i:s');
 
         $stmt->bindParam(':admin_id', $this->admin_id);
@@ -100,7 +100,7 @@ class Post {
             $stmt = $this->conn->prepare($query);
 
             $this->title = htmlspecialchars(strip_tags($this->title));
-            $this->content = htmlspecialchars(strip_tags($this->content));
+            $this->content = ($this->content);
 
             $stmt->bindParam(':title', $this->title, PDO::PARAM_STR);
             $stmt->bindParam(':content', $this->content, PDO::PARAM_STR);

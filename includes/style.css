@@ -14,6 +14,7 @@ a {
   width: 60%;
   margin: 0 auto;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  min-height: 850px;
 }
 
 .navbar{
@@ -96,6 +97,21 @@ a {
     color: white;
 }
 
+
+.footer{
+    margin-top: 10px;
+    height:24px;
+    width: 100%; 
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: relative;
+    bottom: 0pt;
+    left: 0pt;
+    color: #aaa;
+    text-align: center;
+}
 .post-list {
     height: 70px;
     margin: auto;

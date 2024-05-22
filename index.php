@@ -40,7 +40,7 @@ foreach ($posts as $post) {
             <?php echo ($post['title']) ?>
         </h2>
         <p style="font-size: 14px;margin-top:-10px;">
-            <?php echo htmlspecialchars(substr($post['content'], 0, 120)); 
+            <?php echo (substr($post['content'], 0, 120)); 
             ?> <b>Read More.</b>
         </p>
     </div>
@@ -51,9 +51,10 @@ foreach ($posts as $post) {
         ?>
     </div>
 </a>
-</>
-<?php
-}
-?>
-
-<p style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">© All rights reserved — Native Blog</p>
+<?php } ?>
+</div>
+<div class="footer">
+    <div class="footer-content">
+    © All rights reserved — Native Blog
+    </div>
+</div>

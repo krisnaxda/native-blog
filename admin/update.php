@@ -51,10 +51,18 @@ include "../includes/navAdmin.php";
   <h1>Update Post</h1>
 </div>
 <script>
-//     function textAreaAdjust(element) {
-//   element.style.height = "1px";
-//   element.style.height = (25+element.scrollHeight)+"px";
-// }
+  tinymce.init({
+    selector: 'textarea',
+    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+    tinycomments_mode: 'embedded',
+    tinycomments_author: 'Author name',
+    mergetags_list: [
+      { value: 'First.Name', title: 'First Name' },
+      { value: 'Email', title: 'Email' },
+    ],
+    ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+  });
 
 function setHeight(fieldId){
     document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight+'px';
@@ -83,7 +91,7 @@ setHeight('content');
         <div style="margin-top:20px;">
             Content
         </div>
-        <div>
+        <div style="margin-top:20px;">
             <textarea name="content" onkeyup="textAreaAdjust(this)" id="content"  TextMode="MultiLine" onclick="setHeight('content');" onkeydown="setHeight('content');"><?php echo htmlspecialchars($post->content); ?></textarea>
         </div>
         <div class="submit">

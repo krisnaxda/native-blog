@@ -3,6 +3,12 @@
 <head>
 <link rel="stylesheet" href="http://localhost/native-blog/includes/adminstyle.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tiny.cloud/1/x135pk2tw67kbptltnzb08umvz56h09u15v57pqkgx6d2vqh/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
 <style>
 </style>
 </head>

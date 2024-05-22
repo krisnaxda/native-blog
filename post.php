@@ -24,10 +24,15 @@ $date = date('j F, Y', strtotime($post->date));
 ?>
 <div class="post">
   <h1><?php echo htmlspecialchars($post->title); ?></h1>
-  <p>Posted By <?php echo htmlspecialchars($post->username); ?>, on <?php echo htmlspecialchars($date) ?></p>
+  <p style="margin-top: -30px;">Posted By <?php echo htmlspecialchars($post->username); ?>, on <?php echo htmlspecialchars($date) ?></p>
 </div>
-<div>
-    <?php echo ($post->content); ?>
+<div style="margin-top: 30px;color: #fff; font-size: 19px">
+    <?php echo($post->content); ?>
 </div>
 
-<p style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">© All rights reserved — Native Blog</p>
+</div>
+<div class="footer">
+    <div class="footer-content">
+    © All rights reserved — Native Blog
+    </div>
+</div>
